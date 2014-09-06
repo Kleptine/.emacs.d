@@ -72,5 +72,22 @@
 ;;; ==============================================
 (add-to-list 'auto-mode-alist '("\\.hbs\\'" . html-mode))
 
+;;; ==============================================
+;;;   Colors
+;;; ==============================================
+(disable-theme 'zenburn)
+(load-theme 'solarized-light)
+
+
+;;; ==============================================
+;;;   Highlight characters after 200 columns
+;;; ==============================================
+(require 'whitespace)
+(setq whitespace-line-column 200) ;; limit line length
+(setq whitespace-style '(face lines-tail))
+(add-hook 'prog-mode-hook 'whitespace-mode)
+
+(require 'handlebars-sgml-mode)
+
 (provide 'init)
 ;;; init.el ends here
